@@ -34,7 +34,7 @@ syn keyword mutLabel        default
 " Comments
 syn keyword mutTodo         contained TODO FIXME XXX
 syn region mutComment       start="/\*" end="\*/" contains=mutTodo
-syn match mutLineComment    "#.*" contains=mutTodo
+syn match mutLineComment    "//.*" contains=mutTodo
 
 " Strings
 syn region mutString        start=+'+ end=+'+ contains=Char

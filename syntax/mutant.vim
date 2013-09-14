@@ -23,11 +23,11 @@ syn keyword mutBoolean      true false
 syn keyword mutConstant     none
 syn keyword mutNumber       NPOS
 syn keyword mutTypedef      define this super
-syn keyword mutType         var bool int float string tag event void datetime object robject
+syn keyword mutType         var bool int float string tag void datetime object
 syn keyword mutStructure    class struct
 syn keyword mutOperator     and or in is not isnot
 syn keyword mutStatement    return as
-syn keyword mutStorageClass static
+syn keyword mutStorageClass static abstract override
 syn keyword mutClassDecl    extends implements interface
 syn keyword mutLabel        default
 

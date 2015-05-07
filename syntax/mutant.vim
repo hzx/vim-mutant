@@ -1,14 +1,14 @@
 " Vim syntax file " Language: Mutant
 
 " Quit when a syntax file was already loaded
-if !exists("main_syntax")
+if !exists("mutant_syntax")
   if version < 600
     syntax clear
   elseif exists("b:current_syntax")
     finish
   endif
   " we define it here so that included files can test for it
-  let main_syntax='mutant'
+  let mutant_syntax='mutant'
   " syn region mutantFold start="{" end="}" transparent fold contains=ALL
 endif
 
@@ -17,17 +17,17 @@ endif
 syn match mutError "]\|}\|)" 
 
 " keyword definitions
-syn keyword mutInclude      from import
-syn keyword mutConditional  if else for while
+syn keyword mutInclude      from import extern
+syn keyword mutConditional  switch case if else for while
 syn keyword mutBoolean      true false
-syn keyword mutConstant     none
+syn keyword mutConstant     null
 syn keyword mutNumber       NPOS
 syn keyword mutTypedef      define this super
 syn keyword mutType         var bool int float string tag void datetime object
-syn keyword mutStructure    class struct
-syn keyword mutOperator     and or in is not isnot
+syn keyword mutStructure    enum interface class struct
+syn keyword mutOperator     and or in is not isnot break continue
 syn keyword mutStatement    return as
-syn keyword mutStorageClass static abstract override
+syn keyword mutStorageClass bind static abstract override
 syn keyword mutClassDecl    extends implements interface
 syn keyword mutLabel        default
 
